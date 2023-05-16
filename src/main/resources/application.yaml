@@ -1,0 +1,23 @@
+server:
+  port: 8080
+# 数据库相关
+spring:
+  application:
+    name: hongdou-waimai
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/hongdou?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/hongdou?useSSL=false&useServerPrepStmts=true&serverTimezone=Asia/Shanghai&zeroDateTimeBehavior=convertToNull
+mybatis-plus:
+  configuration:
+# 驼峰式命名
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: assign_id
+hongdou:
+  filePath: D:\java3\file\
